@@ -1,3 +1,4 @@
 #ignore listed
 .venv/
 .DS_Store
+.wsgi.py
