@@ -1,4 +1,5 @@
 blinker==1.8.2
+bython==0.8
 cffi==1.17.1
 click==8.1.7
 cryptography==43.0.1
@@ -10,6 +11,7 @@ Jinja2==3.1.4
 MarkupSafe==2.1.5
 packaging==24.1
 pycparser==2.22
+PyMySQL==1.1.1
 pyOpenSSL==24.2.1
 Werkzeug==3.0.4
 wheel==0.44.0

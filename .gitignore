@@ -2,3 +2,4 @@
 .venv/
 .DS_Store
 .wsgi.py
+.database/db_config.py
