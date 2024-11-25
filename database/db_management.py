@@ -21,12 +21,12 @@ def pullTop20FromDatabase():
 
     return res
 
-def push1ToDatabase(user:str,score:int) -> str:
+def push1ToDatabase(player_name:str,player_score:int) -> str:
     con = create_connection()
     with con:
         with con.cursor() as cursor:
             sql = "INSERT INTO `leaderboard` (`user`, `score`) VALUES (%s, %s)"
-            cursor.execute(sql,(user,str(score)))
+            cursor.execute(sql,(player_name,str(player_score)))
 
         con.commit()
 
