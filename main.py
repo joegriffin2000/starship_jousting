@@ -7,6 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route("/leaderboard_push1",methods=['POST'])
+@cross_origin()
 def leaderboard_push1():
     data = request.get_json()
     player_name = data.get('user')
@@ -23,6 +24,7 @@ def leaderboard_push1():
     return response
 
 @app.route("/leaderboard_pull20",methods=['GET'])
+@cross_origin()
 def leaderboard_pull20():
     item_list = pullTop20FromDatabase()
 
