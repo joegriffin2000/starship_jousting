@@ -13,14 +13,17 @@ def leaderboard_push1():
     player_name = data.get('user')
     player_score = data.get('score')
 
-    push1ToDatabase(player_name,player_score)
-
-    response = make_response(jsonify(
-        {
-            "player_score": player_score,
-            'player_name': player_name,
-            "HTTP Status" : HTTPStatus.OK.value}), HTTPStatus.OK.value)  
+    #push1ToDatabase(player_name,player_score)
     
+    # response = make_response(jsonify(
+    #     {   
+    #         "status":True,
+    #         "player_score": player_score,
+    #         "player_name": player_name,
+    #         "HTTP Status" : HTTPStatus.OK.value}), HTTPStatus.OK.value)
+
+    response = make_response(jsonify( {"HTTP Status" : HTTPStatus.OK.value}), HTTPStatus.OK.value) #temporary workaround to see if i can get this to work
+
     return response
 
 @app.route("/leaderboard_pull20",methods=['GET'])
