@@ -9,9 +9,9 @@ CORS(app)
 @app.route("/leaderboard_push1",methods=['POST'])
 @cross_origin()
 def leaderboard_push1():
-    data = request.get_json()
-    player_name = data.get('user')
-    player_score = data.get('score')
+    #data = request.get_json()
+    #player_name = data.get('user')
+    #player_score = data.get('score')
 
     #push1ToDatabase(player_name,player_score)
     
@@ -22,7 +22,7 @@ def leaderboard_push1():
     #         "player_name": player_name,
     #         "HTTP Status" : HTTPStatus.OK.value}), HTTPStatus.OK.value)
 
-    response = make_response(jsonify( {"HTTP Status" : HTTPStatus.OK.value}), HTTPStatus.OK.value) #temporary workaround to see if i can get this to work
+    response = make_response(jsonify( {"Text":"Don't Be Fooled, This Doesn't Work Yet.","HTTP Status" : HTTPStatus.OK.value}), HTTPStatus.OK.value) #temporary workaround to see if i can get this to work
 
     return response
 
