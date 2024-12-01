@@ -16,7 +16,7 @@ def pullTop20FromDatabase():
     res = ""
     with con:
         with con.cursor() as cursor:
-            cursor.execute("SELECT * FROM leaderboard ORDER BY score LIMIT 20")
+            cursor.execute("SELECT * FROM leaderboard ORDER BY score DESC LIMIT 20")
             res = cursor.fetchall()
 
     return res
