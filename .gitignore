@@ -3,3 +3,4 @@
 .DS_Store
 .wsgi.py
 .database/db_config.py
+.static/js/nginx-selfsigned.crt
