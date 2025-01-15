@@ -9,7 +9,7 @@ CORS(app)
 @app.route("/leaderboard_push1",methods=['POST'])
 @cross_origin()
 def leaderboard_push1():
-    data = request.json
+    data = request.data
     urlData = request.url
 
     #data = request.get_json()
