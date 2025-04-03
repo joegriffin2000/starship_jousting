@@ -19,6 +19,7 @@ def pullTop20FromDatabase():
             cursor.execute("SELECT * FROM leaderboard ORDER BY score DESC LIMIT 20")
             res = cursor.fetchall()
 
+    con.close()
     return res
 
 def push1ToDatabase(player_name:str,player_score:int) -> str:
@@ -29,5 +30,5 @@ def push1ToDatabase(player_name:str,player_score:int) -> str:
             cursor.execute(sql,(player_name,str(player_score)))
 
         con.commit()
-
+    con.close()
     return "Insertion Successful"
